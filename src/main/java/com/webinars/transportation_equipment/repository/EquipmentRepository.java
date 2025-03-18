@@ -1,7 +1,8 @@
 package com.webinars.transportation_equipment.repository;
 
-import com.webinars.transportation_equipment.pojo.Equipment;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface EquipmentRepository extends JpaRepository<Equipment, String> {
+import com.webinars.transportation_equipment.pojo.Equipment;
+
+public interface EquipmentRepository extends MongoRepository<Equipment, String> {
 }
