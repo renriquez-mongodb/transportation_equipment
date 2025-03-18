@@ -1,0 +1,49 @@
+{
+ 
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Location",
+    "type": "object",
+    "properties": {
+      "_id": {
+        "type": "string",
+        "description": "Unique identifier for the location (ObjectId)"
+      },
+      "name": {
+        "type": "string",
+        "description": "Name of the location (e.g., 'warehouse A', 'depot B', 'loading dock C')"
+      },
+      "address": {
+        "type": "string",
+        "description": "Physical address ofThe location"
+      },
+      "coordinates": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Type ofTheCoordinates"
+          },
+          "coordinates": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          }
+        },
+        "required": ["type", "coordinates"]
+      },
+      "capacity": {
+        "type": "integer",
+        "description": "Maximum capacityOfTheLocation (e.g., number ofTrucks, containers)"
+      }
+    },
+    "required": [
+      "_id",
+      "name",
+      "address",
+      "coordinates",
+      "capacity"
+    ]
+  }

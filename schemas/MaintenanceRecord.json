@@ -1,0 +1,46 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "MaintenanceRecord",
+    "type": "object",
+    "properties": {
+      "_id": {
+        "type": "string",
+        "description": "Unique identifier for the maintenance record (ObjectId)"
+      },
+      "equipment_id": {
+        "type": "string",
+        "description": "Reference to the equipment for which the maintenance was performed (ObjectId)"
+      },
+      "date": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Date when the maintenance was performed"
+      },
+      "description": {
+        "type": "string",
+        "description": "Description of the maintenance activity"
+      },
+      "technician": {
+        "type": "string",
+        "description": "Name of the technician who performed the maintenance"
+      },
+      "status": {
+        "type": "string",
+        "description": "Status of the maintenance (e.g., 'completed', 'in progress')"
+      },
+      "next_due_date": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Date when the next maintenance is due"
+      }
+    },
+    "required": [
+      "_id",
+      "equipment_id",
+      "date",
+      "description",
+      "technician",
+      "status",
+      "next_due_date"
+    ]
+  }

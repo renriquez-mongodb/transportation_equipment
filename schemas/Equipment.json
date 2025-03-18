@@ -1,0 +1,66 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Equipment",
+    "type": "object",
+    "properties": {
+      "_id": {
+        "type": "string",
+        "description": "Unique identifier for the equipment (ObjectId)"
+      },
+      "type": {
+        "type": "string",
+        "description": "Type of equipment (e.g., 'truck', 'train', 'container', 'flatbed', 'tank')"
+      },
+      "make": {
+        "type": "string",
+        "description": "Manufacturer of the equipment"
+      },
+      "model": {
+        "type": "string",
+        "description": "Model of the equipment"
+      },
+      "year": {
+        "type": "integer",
+        "description": "Year of manufacture"
+      },
+      "registration_number": {
+        "type": "string",
+        "description": "Unique registration number of the equipment"
+      },
+      "status": {
+        "type": "string",
+        "description": "Current status of the equipment (e.g., 'active', 'maintenance', 'out of service')"
+      },
+      "last_inspection_date": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Date of the last inspection"
+      },
+      "next_inspection_date": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Date of the next scheduled inspection"
+      },
+      "current_location": {
+        "type": "string",
+        "description": "Current location of the equipment (e.g., 'warehouse A', 'depot B')"
+      },
+      "capacity": {
+        "type": "number",
+        "description": "Capacity of the equipment (e.g., weight capacity for trucks, volume for tanks)"
+      }
+    },
+    "required": [
+      "_id",
+      "type",
+      "make",
+      "model",
+      "year",
+      "registration_number",
+      "status",
+      "last_inspection_date",
+      "next_inspection_date",
+      "current_location",
+      "capacity"
+    ]
+  }

@@ -1,0 +1,4 @@
+spring.application.name=transportation_equipment
+spring.data.mongodb.uri=mongodb+srv://<username>:<pwd>@<cluster>.mongodb.net/mygrocerylist
+spring.data.mongodb.database=mygrocerylist
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver

@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TemperatureMeasurement",
+    "type": "object",
+    "properties": {
+      "_id": {
+        "type": "string",
+        "description": "Unique identifier for the temperature measurement (ObjectId)"
+      },
+      "equipment_id": {
+        "type": "string",
+        "description": "Reference to the equipment for which the temperature is measured (ObjectId)"
+      },
+      "timestamp": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Date and time when the temperature was recorded"
+      },
+      "temperature": {
+        "type": "number",
+        "description": "Measured temperature in degrees Celsius"
+      },
+      "location": {
+        "type": "string",
+        "description": "Location where the temperature was measured (e.g., 'cargo hold', 'engine room')"
+      },
+      "sensor_id": {
+        "type": "string",
+        "description": "Unique identifier for the temperature sensor used"
+      }
+    },
+    "required": [
+      "_id",
+      "equipment_id",
+      "timestamp",
+      "temperature",
+      "location",
+      "sensor_id"
+    ]
+  }

@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Sensor",
+    "type": "object",
+    "properties": {
+      "_id": {
+        "type": "string",
+        "description": "Unique identifier for the sensor (ObjectId)"
+      },
+      "sensor_id": {
+        "type": "string",
+        "description": "Unique identifier for the sensor"
+      },
+      "type": {
+        "type": "string",
+        "description": "Type of sensor (e.g., 'temperature', 'pressure')"
+      },
+      "make": {
+        "type": "string",
+        "description": "Manufacturer of the sensor"
+      },
+      "model": {
+        "type": "string",
+        "description": "Model of the sensor"
+      },
+      "installation_date": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Date when the sensor was installed"
+      },
+      "status": {
+        "type": "string",
+        "description": "Current status of the sensor (e.g., 'active', 'inactive')"
+      }
+    },
+    "required": [
+      "_id",
+      "sensor_id",
+      "type",
+      "make",
+      "model",
+      "installation_date",
+      "status"
+    ]
+  }
